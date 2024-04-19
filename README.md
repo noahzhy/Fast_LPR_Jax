@@ -68,4 +68,3 @@ $$ -->
 
 
 ## Ablation Study
-# Fast_LPR_Jax
