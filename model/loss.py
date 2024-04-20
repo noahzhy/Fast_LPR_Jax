@@ -115,6 +115,7 @@ def center_ctc_loss(logits, n_class=10, n_feat=64, **kwargs):
     feat_dot_center = jnp.matmul(feats_reshape, centers.T)
     distmat = distmat - 2.0 * feat_dot_center
 
+    preds = jax.nn.log_softmax(preds)
     labels = preds.argmax(axis=-1).reshape(-1)
     labels = jnp.broadcast_to(jnp.expand_dims(labels, axis=1), (batch_size, n_class))
     mask = jnp.equal(

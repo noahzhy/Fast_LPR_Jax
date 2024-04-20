@@ -203,7 +203,7 @@ class TinyLPR(nn.Module):
                            )(attn)
             return attn, mat, out
 
-        out = nn.softmax(out)
+        out = nn.log_softmax(out)
         return out
 
 

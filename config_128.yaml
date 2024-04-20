@@ -37,7 +37,7 @@ focal_ctc_loss:
   weight: 2.0
   blank_id: *bi
   alpha: 1.0
-  gamma: 3.0
+  gamma: 2.0
 
 center_ctc_loss:
   weight: 0.5
@@ -45,4 +45,4 @@ center_ctc_loss:
   n_feat: *nf
 
 dice_bce_loss:
-  weight: 1.5
+  weight: 1.0
